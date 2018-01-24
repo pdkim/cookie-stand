@@ -11,7 +11,7 @@ var patStores = {
         console.log('Pat\'s store on Pike sold ' + patStores.pike.cookiePerHr[i] + ' cookies at ' + patStores.storeHours[i] + '.');
       }
     },
-    calcAvg: function() {
+    totalSum: function() {
       function addCookie(a, b) {
         var addition = a + b;
         return addition;
@@ -20,11 +20,15 @@ var patStores = {
       for(var i = 0; i < patStores.pike.cookiePerHr.length; i++) {
         totalCookies = addCookie(patStores.pike.cookiePerHr[i], totalCookies);
       }
-      var avgCookies = totalCookies / patStores.pike.cookiePerHr.length;
+      console.log(totalCookies);
+    },
+    calcAvg: function() {
+      var avgCookies = patStores.pike.totalSum / patStores.storeHours.length;
       console.log(Math.round(avgCookies));
     }
   }
 };
 
 patStores.pike.hourlyCookies();
+patStores.pike.totalSum();
 patStores.pike.calcAvg();
