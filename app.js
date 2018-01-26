@@ -1,34 +1,46 @@
 'use strict';
 
-var patStores = {
-  storeHours: ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
-  pike: {
-    minCustomers: 23,
-    maxCustomers: 65,
-    cookiePerHr: [16, 20, 35, 48, 56, 77, 93, 144, 119, 84, 61, 23, 42, 57, 29],
-    hourlyCookies: function() {
-      for(var i = 0; i < patStores.storeHours.length; i++) {
-        console.log('Pat\'s store on Pike sold ' + patStores.pike.cookiePerHr[i] + ' cookies at ' + patStores.storeHours[i] + '.');
-      }
-    },
-    totalSum: function() {
-      function addCookie(a, b) {
-        var addition = a + b;
-        return addition;
-      }
-      var totalCookies = 0;
-      for(var i = 0; i < patStores.pike.cookiePerHr.length; i++) {
-        totalCookies = addCookie(patStores.pike.cookiePerHr[i], totalCookies);
-      }
-      console.log(totalCookies);
-    },
-    calcAvg: function() {
-      var avgCookies = patStores.pike.totalSum / patStores.storeHours.length;
-      console.log(Math.round(avgCookies));
+
+var storeHours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
+
+var pike = {
+  name: "First and Pike",
+  minCustomers: 23,
+  maxCustomers: 65,
+  avgCookies: 6.3,
+  cookiesPerHr: [],
+  customerPerHr: [],
+  sumCookies: 0,
+  sumCustomerPerHr: function() {
+    for(var i = 0; i < storeHours.length; i++) {
+      this.customerPerHr.push(Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers));
+      console.log(this.customerPerHr[i]);
     }
-  }
+  },
+  sumCookiesPerHour: function() {
+    for(var j = 0; j < storeHours.length; j++) {
+      this.cookiesPerHr.push(
+        Math.round(this.avgCookies * this.customerPerHr[j])
+      );
+      console.log(this.cookiesPerHr[j]);
+    }
+  },
+  display: function() {
+    var fnP = document.getElementById('fnP');
+    var h3Element = document.createElement('h3');
+    h3Element.textContent = this.name;
+    fnP.appendChild(h3Element);
+    this.sumCustomerPerHr();
+    this.sumCookiesPerHour();
+    for(var k = 0; k < storeHours.length; k++) {
+      var location = document.getElementById('pike');
+      var liElement = document.createElement('li');
+      liElement.textContent =
+        storeHours[k] + ': ' + this.cookiesPerHr[k] + ' cookies';
+      console.log(liElement);
+      location.appendChild(liElement);
+    }
+  },
 };
 
-patStores.pike.hourlyCookies();
-patStores.pike.totalSum();
-patStores.pike.calcAvg();
+pike.display();
