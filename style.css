@@ -2,6 +2,20 @@
   background-color: lightblue;
 }
 
-table, th, td {
-  border: 1px solid black;
+#center {
+  text-align: center;
+}
+
+.left {
+  float: left;
+  list-style-position: inside;
+  margin: 10px;
+  width: 300px;
+}
+
+.right {
+  float: right;
+  list-style-position: inside;
+  margin: 10px;
+  width: 300px;
 }
