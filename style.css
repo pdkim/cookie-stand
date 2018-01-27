@@ -1,5 +1,7 @@
 * {
   background-color: lightblue;
+  font-family: 'Courgette', cursive;
+  color: rgb(5, 34, 5);
 }
 
 #logo {
@@ -28,6 +30,12 @@
   list-style-position: inside;
   margin: 10px;
   width: 300px;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  color: rgb(10, 9, 82);
 }
 
 #fnP {
