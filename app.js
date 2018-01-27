@@ -203,7 +203,6 @@ var alkiStore = {
   },
 };
 
-
 pike.display();
 airport.display();
 sCenter.display();

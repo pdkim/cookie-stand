@@ -2,6 +2,16 @@
   background-color: lightblue;
 }
 
+#logo {
+  width: 400px;
+  float: left;
+  margin: 10px;
+}
+
+#intro {
+  margin: 10px;
+}
+
 #center {
   text-align: center;
   float: center;
