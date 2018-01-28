@@ -5,6 +5,8 @@ var storeHours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2P
 
 var allStores = [];
 
+var totalCookiesPerHr = 0;
+
 function MakeLocation(
   name,
   minCustomers,
@@ -38,63 +40,69 @@ function MakeLocation(
 }
 
 function makeStore() {
-  new MakeLocation("First and Pike", 23, 65, 6.3);
-  new MakeLocation("SeaTac Airport", 3, 24, 1.2);
-  new MakeLocation("Seattle Center", 11, 38, 3.7);
-  new MakeLocation("Capitol Hill", 20, 38, 2.3);
-  new MakeLocation("Alki", 2, 16, 4.6);
+  new MakeLocation('First and Pike', 23, 65, 6.3);
+  new MakeLocation('SeaTac Airport', 3, 24, 1.2);
+  new MakeLocation('Seattle Center', 11, 38, 3.7);
+  new MakeLocation('Capitol Hill', 20, 38, 2.3);
+  new MakeLocation('Alki', 2, 16, 4.6);
 }
 
-function makeHeaderRows(salesChart) {
-  var trElement = document.createElement("tr");
-  var thElement = document.createElement("th");
+function makeHeaderRows() {
+  var salesChart = document.getElementById('salesChart');
+  var trElement = document.createElement('tr');
+  var thElement = document.createElement('th');
   trElement.appendChild(thElement);
   for(var c = 0; c < storeHours.length; c++) {
-    thElement = document.createElement("th");
+    thElement = document.createElement('th');
     thElement.textContent = storeHours[c];
     trElement.appendChild(thElement);
   }
   salesChart.appendChild(trElement);
-  var totalEntry = document.createElement("th");
+  var totalEntry = document.createElement('th');
   totalEntry.textContent = 'Daily Location Totals';
   trElement.appendChild(totalEntry);
 }
 
-function makeBodyRows(salesChart) {
+function makeBodyRows() {
   for(var d = 0; d < allStores.length; d++) {
-    var trElement = document.createElement("tr");
+    var salesChart = document.getElementById('salesChart');
+    var trElement = document.createElement('tr');
     var storeName = allStores[d];
-    var tdElement = document.createElement("td");
+    var tdElement = document.createElement('td');
     tdElement.textContent = storeName.name;
     trElement.appendChild(tdElement);
 
     for(var e = 0; e < storeHours.length; e++) {
-      tdElement = document.createElement("td");
-      let cookPerHour  = storeName.cookiesSoldPerHr[e];
+      tdElement = document.createElement('td');
+      var cookPerHour  = storeName.cookiesSoldPerHr[e];
       tdElement.textContent = cookPerHour;
       trElement.appendChild(tdElement);
     }
-    tdElement = document.createElement("td");
+    tdElement = document.createElement('td');
     tdElement.textContent = storeName.cookieTotal;
     trElement.appendChild(tdElement);
     salesChart.appendChild(trElement);
   }
 }
 
-function makeFooterRows(salesChart) {
+function makeFooterRows() {
+  var salesChart = document.getElementById('salesChart');
+  var trElement = document.createElement('tr');
+  var tdElement = document.createElement('td');
+  tdElement.textContent = 'Total';
+  trElement.appendChild(tdElement);
+  salesChart.appendChild(trElement);
+  //Need to figure out why this is looping forever
   for(var f = 0; f < storeHours.length; f++) {
-    var grandTotal = ['Total'];
-    for(var g = 0; g < ; g++) {
-      
+    for(var g = 0; g < allStores.length; g++) {
+      totalCookiesPerHr += allStores[g].cookiesSoldPerHr[f];
     }
   }
+  console.log(makeFooterRows());
 }
 
-function makeTable() {
-  var salesChart = document.getElementById("salesChart");
-  makeHeaderRows(salesChart);
-  makeBodyRows(salesChart);
-}
 
 makeStore();
-makeTable();
+makeHeaderRows();
+makeBodyRows();
+makeFooterRows();
