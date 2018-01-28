@@ -26,6 +26,13 @@
   text-shadow: 20px;
 }
 
+table {
+  align-content: center;
+  text-align: center;
+  width: 1000px;
+  border-style: solid;
+}
+
 nav {
   text-align: center;
 }
