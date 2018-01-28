@@ -40,6 +40,9 @@ var pike = {
       console.log(liElement);
       location.appendChild(liElement);
     }
+    var grandTotal = document.createElement('li');
+    grandTotal.textContent = 'Total: ' + this.sumCookiesPerHour + ' cookies sold.';
+    location.appendChild(grandTotal);
   },
 };
 
