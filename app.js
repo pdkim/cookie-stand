@@ -94,10 +94,15 @@ function makeFooterRows() {
   salesChart.appendChild(trElement);
   //Need to figure out why this is looping forever
   for(var f = 0; f < storeHours.length; f++) {
+    tdElement = document.createElement('td');
     for(var g = 0; g < allStores.length; g++) {
-      totalCookiesPerHr += allStores[g].cookiesSoldPerHr[f];
+      totalCookiesPerHr += allStores[g].cookiesSoldPerHr[g];
+      tdElement.textContent = totalCookiesPerHr;
     }
   }
+
+  trElement.appendChild(tdElement);
+  salesChart.appendChild(trElement);
   console.log(makeFooterRows());
 }
 
