@@ -85,29 +85,29 @@ function makeBodyRows() {
   }
 }
 
-function makeFooterRows() {
-  var salesChart = document.getElementById('salesChart');
-  var trElement = document.createElement('tr');
-  var tdElement = document.createElement('td');
-  tdElement.textContent = 'Total';
-  trElement.appendChild(tdElement);
-  salesChart.appendChild(trElement);
-  //Need to figure out why this is looping forever
-  for(var f = 0; f < storeHours.length; f++) {
-    tdElement = document.createElement('td');
-    for(var g = 0; g < allStores.length; g++) {
-      totalCookiesPerHr += allStores[g].cookiesSoldPerHr[g];
-      tdElement.textContent = totalCookiesPerHr;
-    }
-  }
+// function makeFooterRows() {
+//   var salesChart = document.getElementById('salesChart');
+//   var trElement = document.createElement('tr');
+//   var tdElement = document.createElement('td');
+//   tdElement.textContent = 'Total';
+//   trElement.appendChild(tdElement);
+//   salesChart.appendChild(trElement);
+//   //Need to figure out why this is looping forever
+//   for(var f = 0; f < storeHours.length; f++) {
+//     tdElement = document.createElement('td');
+//     for(var g = 0; g < allStores.length; g++) {
+//       totalCookiesPerHr += allStores[g].cookiesSoldPerHr[g];
+//       tdElement.textContent = totalCookiesPerHr;
+//     }
+//   }
 
-  trElement.appendChild(tdElement);
-  salesChart.appendChild(trElement);
-  console.log(makeFooterRows());
-}
+//   trElement.appendChild(tdElement);
+//   salesChart.appendChild(trElement);
+//   console.log(makeFooterRows());
+// }
 
 
 makeStore();
 makeHeaderRows();
 makeBodyRows();
-makeFooterRows();
+// makeFooterRows();
