@@ -5,8 +5,7 @@ var storeHours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2P
 
 var allStores = [];
 
-var totalCookiesPerHr = 0;
-
+//constructor
 function MakeLocation(
   name,
   minCustomers,
@@ -39,6 +38,7 @@ function MakeLocation(
   allStores.push(this);
 }
 
+//create the stores within my array
 function makeStore() {
   new MakeLocation('First and Pike', 23, 65, 6.3);
   new MakeLocation('SeaTac Airport', 3, 24, 1.2);
@@ -47,6 +47,7 @@ function makeStore() {
   new MakeLocation('Alki', 2, 16, 4.6);
 }
 
+//create a header row in salmon cookie table (hours)
 function makeHeaderRows() {
   var salesChart = document.getElementById('salesChart');
   var trElement = document.createElement('tr');
@@ -63,6 +64,7 @@ function makeHeaderRows() {
   trElement.appendChild(totalEntry);
 }
 
+//create the body of the table using info from the allStores array
 function makeBodyRows() {
   for(var d = 0; d < allStores.length; d++) {
     var salesChart = document.getElementById('salesChart');
@@ -85,27 +87,29 @@ function makeBodyRows() {
   }
 }
 
+//create a footer row with grand totals per hour and cookies sold.
+function makeFooterRows() {
+  var salesChart = document.getElementById('salesChart');
+  var trElement = document.createElement('tr');
+  var tdElement = document.createElement('td');
+  tdElement.textContent = 'Total';
+  trElement.appendChild(tdElement);
+  salesChart.appendChild(trElement);
+  //Need to figure out why this gives me no values
+  for(var f = 0; f < storeHours.length; f++) {
+    var totalCookiesPerHr = 0;
+    for(var g = 0; g < allStores.length; g++){
+      totalCookiesPerHr += allStores.cookiesSoldPerHr[g] + allStores.cookiesSoldPerHr[f];
+    }
+    tdElement = document.createElement('td');
+    tdElement.textContent = totalCookiesPerHr;
+    trElement.appendChild(tdElement);
+  }
 
-// function makeFooterRows() {
-//   var salesChart = document.getElementById('salesChart');
-//   var trElement = document.createElement('tr');
-//   var tdElement = document.createElement('td');
-//   tdElement.textContent = 'Total';
-//   trElement.appendChild(tdElement);
-//   salesChart.appendChild(trElement);
-//   //Need to figure out why this is looping forever
-//   for(var f = 0; f < storeHours.length; f++) {
-//     tdElement = document.createElement('td');
-//     for(var g = 0; g < allStores.length; g++) {
-//       totalCookiesPerHr += allStores[g].cookiesSoldPerHr[g];
-//       tdElement.textContent = totalCookiesPerHr;
-//     }
-//   }
-
-//   trElement.appendChild(tdElement);
-//   salesChart.appendChild(trElement);
-//   console.log(makeFooterRows());
-// }
+  trElement.appendChild(tdElement);
+  salesChart.appendChild(trElement);
+  console.log(makeFooterRows());
+}
 
 //Event starts here
 var addRow = document.getElementById('salesChart');
@@ -153,11 +157,11 @@ function handleSubmit(event) {
   addNewRow();
 }
 
-//event listener
+// //event listener
 addRow.addEventListener('submit', handleSubmit);
 
 
 makeStore();
 makeHeaderRows();
 makeBodyRows();
-// makeFooterRows();
+makeFooterRows();
