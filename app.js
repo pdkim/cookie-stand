@@ -85,6 +85,7 @@ function makeBodyRows() {
   }
 }
 
+
 // function makeFooterRows() {
 //   var salesChart = document.getElementById('salesChart');
 //   var trElement = document.createElement('tr');
@@ -105,6 +106,55 @@ function makeBodyRows() {
 //   salesChart.appendChild(trElement);
 //   console.log(makeFooterRows());
 // }
+
+//Event starts here
+var addRow = document.getElementById('salesChart');
+
+//function for adding new row
+function addNewRow() {
+  var salesChart = document.getElementById('salesChart');
+  var trElement = document.createElement('tr');
+  var storeName = allStores[allStores.length];
+  var tdElement = document.createElement('td');
+  tdElement.textContent = storeName.name;
+  trElement.appendChild(tdElement);
+
+  for(var e = 0; e < storeHours.length; e++) {
+    tdElement = document.createElement('td');
+    var cookPerHour  = storeName.cookiesSoldPerHr[e];
+    tdElement.textContent = cookPerHour;
+    trElement.appendChild(tdElement);
+  }
+  tdElement = document.createElement('td');
+  tdElement.textContent = storeName.cookieTotal;
+  trElement.appendChild(tdElement);
+  salesChart.appendChild(trElement);
+}
+
+//event
+function handleSubmit(event) {
+  console.log(event);
+  event.preventDefault();
+
+  if(!event.target.name.value) {
+    return alert('Must enter a store location.');
+  }
+  if(!event.target.minCustomers.value || !event.target.maxCustomers.value || !event.target.avgCookies.value){
+    return alert('Must enter a numerical value.');
+  }
+  var newLocation = new MakeLocation(this.name, this.minCustomers, this.maxCustomers, this.avgCookies);
+  event.target.name.value = null;
+  event.target.minCustomers.value = null;
+  event.target.maxCustomers.value = null;
+  event.target.avgCookies.value = null;
+
+  allStores.push(newLocation);
+  console.log(newLocation);
+  addNewRow();
+}
+
+//event listener
+addRow.addEventListener('submit', handleSubmit);
 
 
 makeStore();
