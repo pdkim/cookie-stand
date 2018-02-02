@@ -1,6 +1,7 @@
 * {
   background-color: lightblue;
   font-family: 'Courgette', cursive;
+  font-size: 14;
   color: rgb(5, 34, 5);
 }
 
@@ -30,26 +31,65 @@ table {
   align-content: center;
   text-align: center;
   width: 1000px;
+  border: 3px;
   border-style: solid;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+table th, tr, td {
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(8, 44, 8);
+  align-content: center;
+  color: rgb(8, 44, 8);
+}
+
+th  {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  width: 10px;
+}
+
+form {
+  width: 960px;
+  height: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  margin-left: 20px;
 }
 
 nav {
+  width: 1200px;
+  background-color: darkblue;
   text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: 'Courgette', cursive;
+
 }
 
 a {
   margin-right: 50px;
 }
+
 .store {
   text-align: left;
   color: salmon;
   width: 300p;
   margin: 50px;
   float: left;
+  margin: 20px;
 }
 
 h4 {
   font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
   text-align: center;
 }
 
