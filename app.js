@@ -105,7 +105,6 @@ function makeFooterRows() {
     tdElement.textContent = totalCookiesPerHr;
     trElement.appendChild(tdElement);
   }
-  console.log(makeFooterRows());
 }
 
 //Event starts here
