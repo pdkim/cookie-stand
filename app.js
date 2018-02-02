@@ -105,6 +105,12 @@ function makeFooterRows() {
     tdElement.textContent = totalCookiesPerHr;
     trElement.appendChild(tdElement);
   }
+  var netTotalCookies = 0;
+  netTotalCookies += totalCookiesPerHr;
+  tdElement = document.createElement('td');
+  tdElement.textContent = netTotalCookies;
+  trElement.appendChild(tdElement);
+  salesChart.appendChild(trElement);
 }
 
 //Event starts here
