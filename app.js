@@ -130,7 +130,7 @@ function handleSubmit(event) {
   var avgCookies = parseFloat(event.target.allStores.avgCookies);
 
   if(!event.target.name.value || !event.target.minCustomers.value || !event.target.maxCustomers.value || !event.target.avgCookies.value){
-    return alert('Must enter a numerical value.');
+    return alert('Please enter a field');
   }
 
   var newLocation = new MakeLocation(name, minCustomers, maxCustomers, avgCookies);
@@ -141,11 +141,11 @@ function handleSubmit(event) {
   event.target.avgCookies.value = null;
 
   allStores.push(newLocation);
-  console.log(newLocation);
+  makeStore();
   makeBodyRows();
 }
 
 //event listener
 salesChart.addEventListener('submit', handleSubmit);
-console.log(salesChart);
+console.log(allStores);
 
