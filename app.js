@@ -7,6 +7,8 @@ var allStores = [];
 
 var salesChart = document.getElementById('salesChart');
 
+var totalCookiesPerHr = 0;
+
 //constructor
 function MakeLocation(
   name,
@@ -97,9 +99,8 @@ function makeFooterRows() {
   tdElement.textContent = 'Total';
   trElement.appendChild(tdElement);
   salesChart.appendChild(trElement);
-  //Need to figure out why this keeps looping
   for(var f = 0; f < storeHours.length; f++) {
-    var totalCookiesPerHr = 0;
+    totalCookiesPerHr = 0;
     tdElement = document.createElement('td');
     for(var g = 0; g < allStores.length; g++){
       totalCookiesPerHr += allStores[g].cookiesSoldPerHr[f];

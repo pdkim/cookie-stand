@@ -5,15 +5,25 @@
   color: rgb(5, 34, 5);
 }
 
-#logo {
-  width: 400px;
-  float: left;
-  margin: 10px;
+h1 {
+  font-size: 24px;
+  font-family: 'Courgette', cursive;
+
 }
 
-#intro {
-  margin: 10px;
+h4 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  text-align: center;
 }
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  color: rgb(10, 9, 82);
+}
+
+/* Sales.html */
 
 #center {
   text-align: center;
@@ -62,16 +72,22 @@ form {
   margin-left: 20px;
 }
 
+/* Index */
+
+#logo {
+  width: 400px;
+  float: left;
+  margin: 10px;
+}
+
+#intro {
+  margin: 10px;
+}
+
 nav {
   width: 1200px;
   background-color: darkblue;
   text-align: center;
-}
-
-h1 {
-  font-size: 24px;
-  font-family: 'Courgette', cursive;
-
 }
 
 a {
@@ -85,12 +101,6 @@ a {
   margin: 50px;
   float: left;
   margin: 20px;
-}
-
-h4 {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 18px;
-  text-align: center;
 }
 
 .store img {
@@ -107,25 +117,6 @@ h4 {
   float: right;
   text-align: center;
   list-style-position: inside
-}
-
-.left {
-  float: left;
-  list-style-position: inside;
-  width: 300px;
-}
-
-.right {
-  float: right;
-  list-style-position: inside;
-  margin: 10px;
-  width: 300px;
-}
-
-p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 13px;
-  color: rgb(10, 9, 82);
 }
 
 #fnP {
@@ -146,4 +137,18 @@ p {
 
 #nameAlki {
   text-align: center;
+}
+
+/* For lab 6 */
+.left {
+  float: left;
+  list-style-position: inside;
+  width: 300px;
+}
+
+.right {
+  float: right;
+  list-style-position: inside;
+  margin: 10px;
+  width: 300px;
 }
