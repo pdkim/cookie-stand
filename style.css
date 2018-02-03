@@ -13,7 +13,7 @@ body {
 h1 {
   font-size: 48px;
   font-family: 'Courgette', cursive;
-  width: 960px;
+  width: 1000px;
   background-color: rgb(16, 16, 56);
   color: white;
   padding: 20px;
@@ -133,7 +133,7 @@ nav {
 }
 
 a {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Comfortaa', cursive;
   font-size: 14px;
   font-weight: bolder;
   text-decoration: none;
@@ -179,12 +179,15 @@ a {
   border: 5px;
   border-style: solid;
   padding: 5px;
+  background-color: lightsalmon;
 }
 
 #cookie-types img {
   width: 150px;
   height: 100px;
   margin: 5px;
+  border: 1px;
+  border-style: solid;
 }
 
 #merchandise {
@@ -197,26 +200,50 @@ a {
   border: 5px;
   border-style: solid;
   padding: 5px;
+  background-color: lightsalmon;
 }
 
 #merchandise img {
   width: 120px;
   height: 145px;
   margin: 5px;
+  border: 1px;
+  border-style: solid;
+}
+
+#sharing {
+  width: 1000px;
+  height: 200px;
+  margin: 30px;
+  float: left;
+}
+
+#sharing img {
+  width: 300px;
+  height: 125px;
+  float: left;
+}
+
+#sharing p{
+  width: 400px;
+  float: left;
+  margin-left: 40px;
+  background-color: lightsalmon;
+  padding: 20px;
+}
+
+#sharing a {
+  margin: 0px;
+  color: rgb(8, 44, 8);
 }
 
 footer {
-  width: 960px;
+  width: 1000px;
   height: 20px;
   background-color: rgb(16, 16, 56);
-  margin-top: 1000px;
+  float: left;
 }
 
-footer img {
-  width: 200px;
-  height: 75px;
-  float: right;
-}
 /* For lab 6 */
 .left {
   float: left;
