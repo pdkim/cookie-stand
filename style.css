@@ -1,14 +1,25 @@
 * {
-  background-color: lightblue;
+  background-color: rgb(212, 216, 218);
   font-family: 'Courgette', cursive;
   font-size: 14;
   color: rgb(5, 34, 5);
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 48px;
   font-family: 'Courgette', cursive;
+  width: 960px;
+  background-color: rgb(16, 16, 56);
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
+h2 {
+  font-size: 36px;
+  font-family: 'Courgette', cursive;
+  margin: 5px;
+  text-decoration-line: underline;
 }
 
 h4 {
@@ -36,12 +47,6 @@ form {
   border-style: solid;
 }
 
-#locations {
-  margin: 20px;
-  text-align: left;
-  text-decoration-style: double;
-  text-shadow: 20px;
-}
 
 table {
   align-content: center;
@@ -86,32 +91,49 @@ td {
 /* Index */
 
 #logo {
-  width: 400px;
+  width: 300px;
   float: left;
   margin: 10px;
+  padding: 10px;
 }
 
 #intro {
-  margin: 10px;
+  margin: 5px;
+  width: 330px;
+  height: 300px;
+  float: left;
+}
+
+#family {
+  width: 300px;
+  float: left;
+  margin: 5px;
 }
 
 nav {
-  width: 1200px;
-  background-color: rgb(46, 46, 231);
-  text-align: center;
+  width: 1000px;
+  height: 25px;
+  margin-bottom: 10px;
 }
 
 a {
-  margin-right: 50px;
+  text-decoration: none;
+  color: rgb(112, 170, 172);
+  text-align: center;
+}
+
+#locations {
+  margin-top: 10px;
+  width: 1000px;
+  height: 400px;
+  float: left;
 }
 
 .store {
   text-align: left;
   color: salmon;
-  width: 300p;
-  margin: 50px;
+  width: 200px;
   float: left;
-  margin: 20px;
 }
 
 .store img {
@@ -124,11 +146,54 @@ a {
   text-align: center;
 }
 
-#merchandise {
-  float: right;
-  text-align: center;
-  list-style-position: inside
+#cookie-types {
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 400px;
+  height: 300px;
 }
+
+#cookie-types img {
+  width: 150px;
+  height: 100px;
+  margin: 5px;
+}
+
+#merchandise {
+  float: left;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 400px;
+  height: 300px;
+}
+
+#merchandise img {
+  width: 150px;
+  height: 100px;
+  margin: 5px;
+}
+
+#low-end {
+  margin-top: 20px;
+}
+/* For lab 6 */
+.left {
+  float: left;
+  list-style-position: inside;
+  width: 300px;
+}
+
+.right {
+  float: right;
+  list-style-position: inside;
+  margin: 10px;
+  width: 300px;
+}
+
 
 #fnP {
   text-align: center;
@@ -148,18 +213,4 @@ a {
 
 #nameAlki {
   text-align: center;
-}
-
-/* For lab 6 */
-.left {
-  float: left;
-  list-style-position: inside;
-  width: 300px;
-}
-
-.right {
-  float: right;
-  list-style-position: inside;
-  margin: 10px;
-  width: 300px;
 }
