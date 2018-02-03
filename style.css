@@ -5,6 +5,11 @@
   color: rgb(5, 34, 5);
 }
 
+body {
+  width: 1000px;
+  margin: auto;
+}
+
 h1 {
   font-size: 48px;
   font-family: 'Courgette', cursive;
@@ -32,6 +37,10 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 13px;
   color: rgb(10, 9, 82);
+}
+
+li {
+  font-family: 'Permanent Marker', cursive;
 }
 
 /* Sales.html */
@@ -128,29 +137,31 @@ a {
 #locations {
   margin-top: 10px;
   width: 1000px;
-  height: 400px;
+  height: 300px;
   float: left;
 }
 
 .store {
-  text-align: left;
+  text-align: center;
   color: salmon;
   width: 200px;
   float: left;
+  margin-top: 15px;
 }
 
 .store img {
   width: 150px;
   height: 100px;
-  border-image: 3px;
 }
 
 .store p {
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
 }
 
 #cookie-types {
   float: left;
+  text-align: center;
   margin-top: 10px;
   margin-right: 20px;
   margin-left: 10px;
@@ -165,7 +176,7 @@ a {
 }
 
 #merchandise {
-  float: left;
+  float: right;
   text-align: center;
   margin-top: 10px;
   margin-left: 10px;
