@@ -101,15 +101,19 @@ function makeFooterRows() {
   salesChart.appendChild(trElement);
   for(var f = 0; f < storeHours.length; f++) {
     totalCookiesPerHr = 0;
+    var netTotalCookies = 0;
     tdElement = document.createElement('td');
+    //for the hourly total cookies
     for(var g = 0; g < allStores.length; g++){
       totalCookiesPerHr += allStores[g].cookiesSoldPerHr[f];
+    }
+    //For the net total cookies
+    for (var h = 0; h < allStores.length; h++) {
+      netTotalCookies += allStores[h].cookieTotal;
     }
     tdElement.textContent = totalCookiesPerHr;
     trElement.appendChild(tdElement);
   }
-  var netTotalCookies = 0;
-  netTotalCookies += totalCookiesPerHr;
   tdElement = document.createElement('td');
   tdElement.textContent = netTotalCookies;
   trElement.appendChild(tdElement);
@@ -122,31 +126,37 @@ makeBodyRows();
 makeFooterRows();
 
 //Event starts here
+var newStore = document.getElementById('new-store');
+
 function handleSubmit(event) {
   event.preventDefault();
 
-  var name = event.target.allStores.name;
-  var minCustomers = parseInt(event.target.allStores.minCustomers);
-  var maxCustomers = parseInt(event.target.allStores.maxCustomers);
-  var avgCookies = parseFloat(event.target.allStores.avgCookies);
-
-  if(!event.target.name.value || !event.target.minCustomers.value || !event.target.maxCustomers.value || !event.target.avgCookies.value){
+  if(!event.target.location.value || !event.target.minCustomers.value || !event.target.maxCustomers.value || !event.target.avgCookies.value){
     return alert('Please enter a field');
   }
+  var name = event.target.location.value;
+  var minCustomers = event.target.minCustomers.value;
+  var maxCustomers = event.target.maxCustomers.value;
+  var avgCookies = event.target.avgCookies.value;
 
-  var newLocation = new MakeLocation(name, minCustomers, maxCustomers, avgCookies);
 
-  event.target.name.value = null;
+  new MakeLocation(name, minCustomers, maxCustomers, avgCookies);
+
+  for(var i = salesChart.rows.length; i > 0; i--){
+    salesChart.deleteRow(i-1);
+  }
+
+  makeHeaderRows(salesChart);
+  makeBodyRows(salesChart);
+  makeFooterRows(salesChart);
+  //null form entry.
+  event.target.location.value = null;
   event.target.minCustomers.value = null;
   event.target.maxCustomers.value = null;
   event.target.avgCookies.value = null;
-
-  allStores.push(newLocation);
-  makeStore();
-  makeBodyRows();
 }
 
 //event listener
-salesChart.addEventListener('submit', handleSubmit);
+newStore.addEventListener('submit', handleSubmit);
 console.log(allStores);
 
