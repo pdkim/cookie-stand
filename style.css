@@ -1,5 +1,4 @@
 * {
-  background-color: rgb(212, 216, 218);
   font-family: 'Courgette', cursive;
   font-size: 14;
   color: rgb(5, 34, 5);
@@ -8,6 +7,7 @@
 body {
   width: 1000px;
   margin: auto;
+  background-color: rgb(212, 216, 218);
 }
 
 h1 {
@@ -39,6 +39,11 @@ p {
   color: rgb(10, 9, 82);
 }
 
+img {
+  border: 2px;
+  border-style: solid;
+  border-color: rgb(8, 44, 8);
+}
 li {
   font-family: 'Permanent Marker', cursive;
 }
@@ -104,6 +109,7 @@ td {
   float: left;
   margin: 10px;
   padding: 10px;
+  border: none;
 }
 
 #intro {
@@ -117,21 +123,24 @@ td {
   width: 300px;
   float: left;
   margin: 5px;
-  border: 2px;
-  border-style: solid;
-  border-color:  rgb(8, 44, 8);
 }
 
 nav {
   width: 1000px;
-  height: 25px;
+  height: 20px;
   margin-bottom: 10px;
+  background-color: rgb(16, 16, 56);
 }
 
 a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
   text-decoration: none;
   color: rgb(112, 170, 172);
   text-align: center;
+  background-color: none;
+  margin-left: 145px;
 }
 
 #locations {
@@ -167,6 +176,9 @@ a {
   margin-left: 10px;
   width: 400px;
   height: 300px;
+  border: 5px;
+  border-style: solid;
+  padding: 5px;
 }
 
 #cookie-types img {
@@ -182,22 +194,28 @@ a {
   margin-left: 10px;
   width: 400px;
   height: 300px;
+  border: 5px;
+  border-style: solid;
+  padding: 5px;
 }
 
 #merchandise img {
-  width: 150px;
-  height: 100px;
+  width: 120px;
+  height: 145px;
   margin: 5px;
 }
 
-#low-end {
-  margin-top: 20px;
+footer {
+  width: 960px;
+  height: 20px;
+  background-color: rgb(16, 16, 56);
+  margin-top: 1000px;
 }
 
-#low-end img {
-  float: left;
-  width: 100;
-  height: 50px;
+footer img {
+  width: 200px;
+  height: 75px;
+  float: right;
 }
 /* For lab 6 */
 .left {
