@@ -1,3 +1,242 @@
 * {
-  
+  background-color: rgb(212, 216, 218);
+  font-family: 'Courgette', cursive;
+  font-size: 14;
+  color: rgb(5, 34, 5);
+}
+
+body {
+  width: 1000px;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: 'Courgette', cursive;
+  width: 960px;
+  background-color: rgb(16, 16, 56);
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  font-family: 'Courgette', cursive;
+  margin: 5px;
+  text-decoration-line: underline;
+}
+
+h4 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  text-align: center;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  color: rgb(10, 9, 82);
+}
+
+/* Sales.html */
+
+form {
+  width: 960px;
+  height: 60px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  border: 1px;
+  border-style: solid;
+}
+
+
+table {
+  text-align: center;
+  width: 960px;
+  border: 3px;
+  border-style: solid;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+table th, tr, td {
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(8, 44, 8);
+  align-content: center;
+  color: rgb(8, 44, 8);
+}
+
+th  {
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  width: 10px;
+  background-color: rgb(219, 176, 56);
+}
+
+td {
+  background-color: rgb(245, 201, 180);
+}
+
+#salesChart {
+  margin-top: 20px;
+}
+
+#center {
+  text-align: center;
+  width: 500px;
+  height: 50px;
+  margin: 10px;
+  padding: 5px;
+}
+
+#center p {
+  text-align: center;
+  margin: 10px;
+}
+
+/* Index */
+header {
+  width: 960px;
+  height: 10px;
+  margin-bottom: 5px;
+  background-color: rgb(16, 16, 56);
+}
+
+#logo {
+  width: 300px;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
+
+#intro {
+  margin: 5px;
+  width: 330px;
+  height: 300px;
+  float: left;
+}
+
+#family {
+  width: 300px;
+  float: left;
+  margin: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color:  rgb(8, 44, 8);
+}
+
+nav {
+  width: 1000px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(112, 170, 172);
+  text-align: center;
+}
+
+#locations {
+  margin-top: 10px;
+  width: 1000px;
+  height: 400px;
+  float: left;
+}
+
+.store {
+  text-align: left;
+  color: salmon;
+  width: 200px;
+  float: left;
+}
+
+.store img {
+  width: 150px;
+  height: 100px;
+  border-image: 3px;
+}
+
+.store p {
+  text-align: center;
+}
+
+#cookie-types {
+  float: left;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 10px;
+  width: 400px;
+  height: 300px;
+}
+
+#cookie-types img {
+  width: 150px;
+  height: 100px;
+  margin: 5px;
+}
+
+#merchandise {
+  float: left;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 400px;
+  height: 300px;
+}
+
+#merchandise img {
+  width: 150px;
+  height: 100px;
+  margin: 5px;
+}
+
+#low-end {
+  margin-top: 20px;
+}
+
+#low-end img {
+  float: left;
+  width: 100;
+  height: 50px;
+}
+/* For lab 6 */
+.left {
+  float: left;
+  list-style-position: inside;
+  width: 300px;
+}
+
+.right {
+  float: right;
+  list-style-position: inside;
+  margin: 10px;
+  width: 300px;
+}
+
+
+#fnP {
+  text-align: center;
+}
+
+#seaAirport {
+  text-align: center;
+}
+
+#seattleCenter {
+  text-align: center;
+}
+
+#capHill {
+  text-align: center;
+}
+
+#nameAlki {
+  text-align: center;
 }
