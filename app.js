@@ -101,15 +101,19 @@ function makeFooterRows() {
   salesChart.appendChild(trElement);
   for(var f = 0; f < storeHours.length; f++) {
     totalCookiesPerHr = 0;
+    var netTotalCookies = 0;
     tdElement = document.createElement('td');
+    //for the hourly total cookies
     for(var g = 0; g < allStores.length; g++){
       totalCookiesPerHr += allStores[g].cookiesSoldPerHr[f];
+    }
+    //For the net total cookies
+    for (var h = 0; h < allStores.length; h++) {
+      netTotalCookies += allStores[h].cookieTotal;
     }
     tdElement.textContent = totalCookiesPerHr;
     trElement.appendChild(tdElement);
   }
-  var netTotalCookies = 0;
-  netTotalCookies += totalCookiesPerHr;
   tdElement = document.createElement('td');
   tdElement.textContent = netTotalCookies;
   trElement.appendChild(tdElement);
