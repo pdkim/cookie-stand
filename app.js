@@ -122,31 +122,35 @@ makeBodyRows();
 makeFooterRows();
 
 //Event starts here
+var newStore = document.getElementById('new-store');
+
 function handleSubmit(event) {
   event.preventDefault();
 
-  var name = event.target.allStores.name;
-  var minCustomers = parseInt(event.target.allStores.minCustomers);
-  var maxCustomers = parseInt(event.target.allStores.maxCustomers);
-  var avgCookies = parseFloat(event.target.allStores.avgCookies);
-
-  if(!event.target.name.value || !event.target.minCustomers.value || !event.target.maxCustomers.value || !event.target.avgCookies.value){
+  if(!event.target.location.value || !event.target.minCustomers.value || !event.target.maxCustomers.value || !event.target.avgCookies.value){
     return alert('Please enter a field');
   }
 
-  var newLocation = new MakeLocation(name, minCustomers, maxCustomers, avgCookies);
+  var name = event.target.location.value;
+  var minCustomers = event.target.minCustomers.value;
+  var maxCustomers = event.target.maxCustomers.value;
+  var avgCookies = event.target.avgCookies.value;
 
-  event.target.name.value = null;
+  new MakeLocation(name, minCustomers, maxCustomers, avgCookies);
+
+  for(var i = salesChart.rows.length; i > 0; i--){
+    salesChart.deleteRow(i-1);
+  }
+
+  makeHeaderRows();
+  makeBodyRows();
+  makeFooterRows();
+  event.target.location.value = null;
   event.target.minCustomers.value = null;
   event.target.maxCustomers.value = null;
   event.target.avgCookies.value = null;
-
-  allStores.push(newLocation);
-  makeStore();
-  makeBodyRows();
 }
 
 //event listener
-salesChart.addEventListener('submit', handleSubmit);
-console.log(allStores);
+newStore.addEventListener('submit', handleSubmit);
 
