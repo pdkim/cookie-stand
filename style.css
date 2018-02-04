@@ -6,9 +6,17 @@
 
 body {
   width: 1000px;
+  height: 1400px;
   margin: auto;
   background-color: rgb(212, 216, 218);
 }
+
+/* #main {
+  width: 1100px;
+  height: 1400px;
+  margin: auto;
+  background-color: rgb(212, 216, 218);
+} */
 
 h1 {
   font-size: 48px;
@@ -231,7 +239,7 @@ a {
 }
 
 #sharing {
-  width: 1000px;
+  width: 1100px;
   height: 200px;
   float: left;
   margin-top: 40px;
