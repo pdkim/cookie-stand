@@ -50,17 +50,42 @@ li {
 
 /* Sales.html */
 
-form {
-  width: 960px;
-  height: 60px;
-  margin-top: 20px;
-  margin-right: 10px;
-  margin-bottom: 50px;
-  margin-left: 20px;
-  border: 1px;
-  border-style: solid;
+#top-end {
+  width: 1000px;
+  height: 200px;
+  padding: 10px;
 }
 
+form {
+  width: 200px;
+  height: 150px;
+  border: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: rgb(185, 184, 185);
+  float: left;
+}
+
+#logo2 {
+  width: 500px;
+  height: 150px;
+  border: none;
+  transform: scaleX(-1);
+  float: right;
+  padding: 0px;
+}
+
+#salesHead {
+  text-align: center;
+}
+
+#center {
+  text-align: center;
+  width: 1000px;
+  height: 50px;
+  margin: 10px;
+  padding: 5px;
+}
 
 table {
   align-content: center;
@@ -70,6 +95,7 @@ table {
   border-style: solid;
   margin-top: 20px;
   margin-right: 20px;
+  margin-bottom: 30px;
   margin-left: 20px;
 }
 
@@ -92,14 +118,6 @@ th  {
 
 td {
   background-color: rgb(245, 201, 180);
-}
-
-#center {
-  text-align: center;
-  width: 500px;
-  height: 50px;
-  margin: 10px;
-  padding: 5px;
 }
 
 /* Index */

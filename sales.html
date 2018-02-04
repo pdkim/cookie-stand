@@ -10,36 +10,54 @@
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="">Home</a>
-    <a href="">About Us</a>
-    <a href="">Contact Us</a>
-  </nav>
-  <form id="new-store">
-    <fieldset>
-      <legend>New Store</legend>
-      <br>
-      <label for="location">Location: </label>
-      <input name="location" type="text" size="15">
+  <header>
+    <nav>
+      <a href="">Home</a>
+      <a href="">Menu</a>
+      <a href="">Shop</a>
+      <a href="">Share a Photo!</a>
+    </nav>
+  </header>
 
-      <label for="min-customers">Minimum Customers</label>
-      <input name="min-customers" type="text" size="3">
+  <div id="top-end">
+    <form id="new-store">
+      <fieldset>
+        <legend>New Store</legend>
+        <br>
+        <label for="location">Location: </label>
+        <input name="location" type="text" size="15">
+        <br>
+        <label for="min-customers">Minimum Customers</label>
+        <input name="min-customers" type="text" size="3">
+        <br>
+        <label for="max-customers">Maximum Customers</label>
+        <input name="max-customers" type="text" size="3">
+        <br>
+        <label for="avg-cookies">Average Cookies</label>
+        <input name="avg-cookies" type="text" size="3">
+        <br>
+        <button id="submit-button" type="submit">Add Store</button>
+      </fieldset>
+      </form>
+    
+    <img id="logo2" src="images/salmon.png" alt="Salmon cookie logo image in reverse" title="Reversed logo image">
+  </div>
+  
+  <h1 id="salesHead">Pat's Salmon Cookie's Sales</h1>
 
-      <label for="max-customers">Maximum Customers</label>
-      <input name="max-customers" type="text" size="3">
-
-      <label for="avg-cookies">Average Cookies</label>
-      <input name="avg-cookies" type="text" size="3">
-      
-      <button id="submit-button" type="submit">Add Store</button>
-    </fieldset>
-  </form>
   <div id="center">
-    <h1>Pat's Salmon Cookie's Sales</h1>
     <p>Here is a list of Pat's salmon cookies sales at each of his awesome locations!</p>
     <h2>Sales Chart</h2>
   </div>
+  
   <table id="salesChart"></table>
+  
+  <footer>
+      <a href="">About Us</a>
+      <a href="">Contact Us</a>
+      <a href="">Join Us</a> 
+  </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
