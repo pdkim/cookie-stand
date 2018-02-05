@@ -10,54 +10,50 @@
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="">Home</a>
-      <a href="">Menu</a>
-      <a href="">Shop</a>
-      <a href="">Share a Photo!</a>
-    </nav>
-  </header>
-
-  <div id="top-end">
-    <form id="new-store">
-      <fieldset>
-        <legend>New Store</legend>
-        <br>
-        <label for="location">Location: </label>
-        <input name="location" type="text" size="15">
-        <br>
-        <label for="minCustomers">Minimum Customers</label>
-        <input name="minCustomers" type="text" size="3">
-        <br>
-        <label for="maxCustomers">Maximum Customers</label>
-        <input name="maxCustomers" type="text" size="3">
-        <br>
-        <label for="avgCookies">Average Cookies</label>
-        <input name="avgCookies" type="text" size="3">
-        <br>
-        <button id="submit-button" type="submit">Add Store</button>
-      </fieldset>
-      </form>
+  <div id="main2">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="">Menu</a>
+        <a href="">Shop</a>
+        <a href="">Share a Photo!</a>
+      </nav>
+    </header>
+  
+    <div id="top-end">
+      <form id="new-store">
+        <fieldset>
+          <legend>New Store</legend>
+          <br>
+          <label for="location">Location: </label>
+          <input name="location" type="text" size="15">
+          <br>
+          <label for="minCustomers">Minimum Customers</label>
+          <input name="minCustomers" type="text" size="3">
+          <br>
+          <label for="maxCustomers">Maximum Customers</label>
+          <input name="maxCustomers" type="text" size="3">
+          <br>
+          <label for="avgCookies">Average Cookies</label>
+          <input name="avgCookies" type="text" size="3">
+          <br>
+          <button id="submit-button" type="submit">Add Store</button>
+        </fieldset>
+        </form>
+      
+      <img id="logo2" src="images/salmon.png" alt="Salmon cookie logo image in reverse" title="Reversed logo image">
+    </div>
     
-    <img id="logo2" src="images/salmon.png" alt="Salmon cookie logo image in reverse" title="Reversed logo image">
+    <h1 id="salesHead">Pat's Salmon Cookie's Sales</h1>
+  
+    <div id="center">
+      <p>Here is a list of Pat's salmon cookies sales at each of his awesome locations!</p>
+      <h2>Sales Chart</h2>
+    </div>
+    
+    <table id="salesChart"></table>
+  
+    <script src="app.js"></script>
   </div>
-  
-  <h1 id="salesHead">Pat's Salmon Cookie's Sales</h1>
-
-  <div id="center">
-    <p>Here is a list of Pat's salmon cookies sales at each of his awesome locations!</p>
-    <h2>Sales Chart</h2>
-  </div>
-  
-  <table id="salesChart"></table>
-  
-  <footer>
-      <a href="">About Us</a>
-      <a href="">Contact Us</a>
-      <a href="">Join Us</a> 
-  </footer>
-
-  <script src="app.js"></script>
 </body>
 </html>

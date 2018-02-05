@@ -47,7 +47,17 @@ li {
   font-family: 'Permanent Marker', cursive;
 }
 
+footer {
+  float: bottom;
+}
+
 /* Sales.html */
+#main2 {
+  width: 1025px;
+  height: 900px;
+  margin: auto;
+  background-color: rgb(212, 216, 218);
+}
 
 #top-end {
   width: 1000px;
