@@ -2,12 +2,58 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Page Title</title>
+  <title>Salmon Cookie Sales</title>
+  <link rel="stylesheet" type="text/css" href="reset.css" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 </head>
 <body>
+  <div id="main2">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="">Menu</a>
+        <a href="">Shop</a>
+        <a href="">Share a Photo!</a>
+      </nav>
+    </header>
   
-  <script src="app.js"></script>
+    <div id="top-end">
+      <form id="new-store">
+        <fieldset>
+          <legend>New Store</legend>
+          <br>
+          <label for="location">Location: </label>
+          <input name="location" type="text" size="15">
+          <br>
+          <label for="minCustomers">Minimum Customers</label>
+          <input name="minCustomers" type="text" size="3">
+          <br>
+          <label for="maxCustomers">Maximum Customers</label>
+          <input name="maxCustomers" type="text" size="3">
+          <br>
+          <label for="avgCookies">Average Cookies</label>
+          <input name="avgCookies" type="text" size="3">
+          <br>
+          <button id="submit-button" type="submit">Add Store</button>
+        </fieldset>
+        </form>
+      
+      <img id="logo2" src="images/salmon.png" alt="Salmon cookie logo image in reverse" title="Reversed logo image">
+    </div>
+    
+    <h1 id="salesHead">Pat's Salmon Cookie's Sales</h1>
+  
+    <div id="center">
+      <p>Here is a list of Pat's salmon cookies sales at each of his awesome locations!</p>
+      <h2>Sales Chart</h2>
+    </div>
+    
+    <table id="salesChart"></table>
+  
+    <script src="app.js"></script>
+  </div>
 </body>
 </html>
