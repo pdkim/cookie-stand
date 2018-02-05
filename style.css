@@ -5,26 +5,16 @@
 }
 
 body {
-  width: 1000px;
-  height: 1400px;
-  margin: auto;
-  background-color: rgb(212, 216, 218);
+  background-image: url('images/backgroundAttempt.jpg')
 }
-
-/* #main {
-  width: 1100px;
-  height: 1400px;
-  margin: auto;
-  background-color: rgb(212, 216, 218);
-} */
 
 h1 {
   font-size: 48px;
   font-family: 'Courgette', cursive;
-  width: 1000px;
+  width: 95.5%;
   background-color: rgb(16, 16, 56);
   color: white;
-  padding: 20px;
+  padding: 25px;
   margin-bottom: 20px;
 }
 
@@ -45,6 +35,7 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 13px;
   color: rgb(10, 9, 82);
+  letter-spacing: 1px;
 }
 
 img {
@@ -129,6 +120,12 @@ td {
 }
 
 /* Index */
+#main {
+  width: 1100px;
+  height: 1390px;
+  margin: auto;
+  background-color: rgb(212, 216, 218);
+}
 
 #logo {
   width: 300px;
@@ -139,23 +136,23 @@ td {
 }
 
 #intro {
-  margin: 5px;
+  margin-left: 45px;
   width: 330px;
   height: 300px;
   float: left;
+  text-align: center;
 }
 
 #family {
   width: 300px;
-  float: left;
-  margin: 5px;
+  float: right;
+  margin-right: 20px;
 }
 
 nav {
-  width: 1000px;
+  width: 100%;
   height: 20px;
   margin-bottom: 10px;
-  margin-left: 20px;
   background-color: rgb(16, 16, 56);
 }
 
@@ -172,6 +169,7 @@ a {
 
 #locations {
   margin-top: 10px;
+  margin-left: 35px;
   width: 1000px;
   height: 300px;
   float: left;
@@ -199,8 +197,7 @@ a {
   float: left;
   text-align: center;
   margin-top: 10px;
-  margin-right: 20px;
-  margin-left: 10px;
+  margin-left: 35px;
   width: 400px;
   height: 300px;
   border: 5px;
@@ -221,7 +218,7 @@ a {
   float: right;
   text-align: center;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-right: 60px;
   width: 400px;
   height: 300px;
   border: 5px;
@@ -244,6 +241,7 @@ a {
   float: left;
   margin-top: 40px;
   margin-bottom: 40px;
+  margin-left: 55px;
 }
 
 #sharing img {
@@ -273,14 +271,10 @@ a {
 }
 
 footer {
-  width: 1000px;
+  width: 100%;
   height: 20px;
   background-color: rgb(16, 16, 56);
   float: left;
-}
-
-footer a {
-  margin-left: 200px;
 }
 
 /* For lab 6 */
