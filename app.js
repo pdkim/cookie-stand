@@ -11,6 +11,7 @@ var pike = {
   cookiesPerHr: [],
   customerPerHr: [],
   sumCookies: 0,
+  totalCookies: 0,
   sumCustomerPerHr: function() {
     for(var i = 0; i < storeHours.length; i++) {
       this.customerPerHr.push(Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers));
@@ -38,8 +39,13 @@ var pike = {
       liElement.textContent =
         storeHours[k] + ': ' + this.cookiesPerHr[k] + ' cookies sold.';
       console.log(liElement);
+      this.totalCookies += this.cookiesPerHr[k];
+      console.log(this.totalCookies);
       location.appendChild(liElement);
     }
+    liElement = document.createElement('li');
+    liElement.textContent = this.totalCookies + ' total cookies sold.';
+    location.appendChild(liElement);
   },
 };
 
